@@ -1,1 +1,11 @@
 Hello World
+
+<h1> Todos </h1>
+
+<ul>
+  <li *ngFor="let todo of todos">
+    <p>{{ todo.name }}</p>
+    <p>{{ todo.description }}</p>
+    <small><b *ngIf="todo.isFinished">That one's done</b></small>
+  </li>
+</ul>

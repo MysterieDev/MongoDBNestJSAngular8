@@ -1,3 +1,4 @@
+import { TodoService } from './todo.service';
 import { Todo } from './../../server/src/todo/todo.interface';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,12 @@ export class AppComponent implements OnInit{
   title = 'NgNest';
   todos: Todo[] = [];
 
-  ngOnInit(): void {
-        
+  constructor(private todoSvc: TodoService){}
+
+  ngOnInit() {
+     this.todoSvc.getAllTodos().subscribe(res => {
+       this.todos = res
+     })
+
   }
 }
