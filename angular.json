@@ -28,7 +28,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/spectre-exp.min.css",
+              "src/assets/spectre.min.css",
+              "src/assets/spectre-icons.min.css"
             ],
             "scripts": []
           },
